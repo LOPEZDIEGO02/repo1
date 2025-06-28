@@ -1,22 +1,17 @@
-// todo: hacerlo xd
-
-/*
-investigar cmo seleccionar un numero aleatorio del 1 al 10
+const prompt = require('prompt-sync')();
 
 
-numeroCompu = math.random.....
+const numeroCompu = Math.floor(Math.random() * 10) + 1;
 
-do
-    numeroUsuario = prompt(adivina el numero)
+let numeroUsuario;
 
+do {
+    numeroUsuario = Number(prompt("Adivina el número (1 al 10): "));
 
-    si el numero de la compu es igual al del usuario
-        imprimir ganaste
-    caso contrario
-        sigue intentando
+    if (numeroUsuario === numeroCompu) {
+        console.log("¡Ganaste!");
+    } else {
+        console.log("Sigue intentando...");
+    }
 
-while( mientras el numero del usuario sea diferente al de la compu)
-
-
-
-*/
+} while (numeroUsuario !== numeroCompu);

@@ -1,15 +1,12 @@
 const prompt = require('prompt-sync')();
 
-const alumno        = prompt("cual es el nombre del alumno :");
-const calificacion  = prompt("cual es la calificacion del alumno :");
+const alumno        = prompt("Cuál es el nombre del alumno: ");
+const calificacion  = prompt("Cuál es la calificación del alumno: ");
 
-
-// TODO: agregar validacion de numero.
-// TODO: crear un formato de output bonito, donde incluyas el nombre
-
-
-if (calificacion>=6){
-    console.log("APROBADO")
-}else if (calificacion<=5){
-    console.log("REPROVADO")
+if (isNaN(calificacion)) {
+    console.log("que crees tiene que ser numero");
+} else if (calificacion >= 6) {
+        console.log("Muy bien aprobaste");
+    } else {
+    console.log("ni modo reprobaste");
 }
